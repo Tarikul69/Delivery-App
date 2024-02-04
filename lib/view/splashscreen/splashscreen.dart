@@ -1,3 +1,4 @@
+import 'package:deliveryapp/view/home/home.dart';
 import 'package:deliveryapp/view/onebording/onebording.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => oneboarding(),
+        builder: (context) => home(),
       ),
     );
   }
