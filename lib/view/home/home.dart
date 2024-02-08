@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -30,6 +31,35 @@ class _homeState extends State<home> {
             },
           )
         ],
+      ),
+      body: Container(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: [
+            mycard(),
+            mycard(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget mycard() {
+    return Card(
+      elevation: 0,
+      color: Theme.of(context).colorScheme.primary,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: SizedBox(
+        width: Get.width,
+        height: 90,
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            children: [],
+          ),
+        ),
       ),
     );
   }
