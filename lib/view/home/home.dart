@@ -20,9 +20,14 @@ class _homeState extends State<home> {
         actions: [
           Icon(Icons.notifications),
           Switch.adaptive(
+            activeColor: Theme.of(context).colorScheme.primary,
             applyCupertinoTheme: false,
             value: light,
-            onChanged: (bool value) {},
+            onChanged: (bool value) {
+              setState(() {
+                light = value;
+              });
+            },
           )
         ],
       ),
