@@ -1,4 +1,6 @@
 import 'package:deliveryapp/view/home/home.dart';
+import 'package:deliveryapp/view/order_details/orderdetails.dart';
+import 'package:deliveryapp/view/order_request/orderrequest.dart';
 import 'package:deliveryapp/view/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,11 +16,13 @@ class bottomnavigation extends StatelessWidget {
         body: TabBarView(
           children: [
             home(),
+            orderrequest(),
+            orderdetails(),
             profile(),
           ],
         ),
         bottomNavigationBar: Container(
-          height: 80,
+          height: 90,
           width: Get.width,
           child: TabBar(
             indicatorWeight: 1,
@@ -30,8 +34,16 @@ class bottomnavigation extends StatelessWidget {
             labelColor: Theme.of(context).colorScheme.primary,
             tabs: [
               Tab(
-                text: "Home",
                 icon: Icon(Icons.home),
+              ),
+              Tab(
+                icon: Icon(Icons.list_alt_outlined),
+              ),
+              Tab(
+                icon: Icon(Icons.shopping_bag),
+              ),
+              Tab(
+                icon: Icon(Icons.person),
               ),
             ],
           ),
