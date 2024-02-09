@@ -1,5 +1,7 @@
+import 'package:deliveryapp/components/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -25,6 +27,9 @@ class _homeState extends State<home> {
             applyCupertinoTheme: false,
             value: light,
             onChanged: (bool value) {
+              Provider.of<ThemeProvider>(context, listen: false)
+                  .toggleTheme(true);
+
               setState(() {
                 light = value;
               });
