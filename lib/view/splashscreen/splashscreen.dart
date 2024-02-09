@@ -1,5 +1,6 @@
 import 'package:deliveryapp/view/home/home.dart';
 import 'package:deliveryapp/view/navigation/bottomnavigation.dart';
+import 'package:deliveryapp/view/onebording/onebording.dart';
 import 'package:flutter/material.dart';
 
 class splashscreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => bottomnavigation(),
+        builder: (context) => oneboarding(),
       ),
     );
   }

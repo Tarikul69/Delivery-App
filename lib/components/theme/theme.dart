@@ -9,10 +9,10 @@ ThemeData lightMood = ThemeData(
   ),
 );
 ThemeData darkMood = ThemeData(
-  brightness: Brightness.dark,
+  brightness: Brightness.values.first,
   colorScheme: ColorScheme.dark(
-    background: Colors.black,
-    primary: Colors.grey,
+    background: const Color.fromARGB(255, 206, 196, 196),
+    primary: Color.fromARGB(255, 238, 238, 238),
     secondary: Colors.orange,
   ),
 );

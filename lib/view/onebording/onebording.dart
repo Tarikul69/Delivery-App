@@ -1,3 +1,4 @@
+import 'package:deliveryapp/view/navigation/bottomnavigation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -65,7 +66,7 @@ class _oneboardingState extends State<oneboarding> {
                   alignment: Alignment.center,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Get.off(registration());
+                      Get.off(bottomnavigation());
                     },
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(Get.width, 50),

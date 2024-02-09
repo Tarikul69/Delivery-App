@@ -30,20 +30,52 @@ class _homeState extends State<home> {
               Provider.of<ThemeProvider>(context, listen: false)
                   .toggleTheme(true);
 
-              setState(() {
-                light = value;
-              });
+              setState(
+                () {
+                  light = value;
+                },
+              );
             },
           )
         ],
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        child: Column(
-          children: [
-            mycard(),
-            mycard(),
-          ],
+        //margin: EdgeInsets.all(10),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Title(
+                color: Colors.black,
+                child: Text(
+                  " Active Order",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              mycard(),
+              earning(),
+              mycard(),
+              earning(),
+              mycard(),
+              earning(),
+              mycard(),
+              earning(),
+              mycard(),
+              earning(),
+              // GridView(
+              //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              //     crossAxisCount: 2,
+              //     mainAxisSpacing: 2,
+              //     crossAxisSpacing: 2,
+              //   ),
+              //   children: [],
+              // ),
+            ],
+          ),
         ),
       ),
     );
@@ -58,12 +90,26 @@ class _homeState extends State<home> {
       ),
       child: SizedBox(
         width: Get.width,
-        height: 90,
-        child: Padding(
-          padding: EdgeInsets.all(10),
-          child: Column(
-            children: [],
-          ),
+        height: 190,
+        child: Column(
+          children: [],
+        ),
+      ),
+    );
+  }
+
+  Widget earning() {
+    return Card(
+      elevation: 0,
+      color: Theme.of(context).colorScheme.secondary,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: SizedBox(
+        width: Get.width,
+        height: 190,
+        child: Column(
+          children: [],
         ),
       ),
     );
