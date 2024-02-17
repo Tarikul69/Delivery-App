@@ -11,6 +11,7 @@ class orderdetails extends StatelessWidget {
           "Order Details",
           style: TextStyle(
             fontWeight: FontWeight.bold,
+            color: Colors.black,
           ),
         ),
       ),

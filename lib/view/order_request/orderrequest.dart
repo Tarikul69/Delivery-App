@@ -82,7 +82,13 @@ class _orderrequestState extends State<orderrequest> {
                       shadowColor: Theme.of(context).colorScheme.primary,
                     ),
                     onPressed: () {},
-                    child: Text("Ignore"),
+                    child: Text(
+                      "Ignore",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
                   Spacer(),
                   ElevatedButton(
@@ -91,8 +97,14 @@ class _orderrequestState extends State<orderrequest> {
                       shadowColor: Theme.of(context).colorScheme.secondary,
                     ),
                     onPressed: () {},
-                    child: Text("Accept"),
-                  )
+                    child: Text(
+                      "Accept",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             )
