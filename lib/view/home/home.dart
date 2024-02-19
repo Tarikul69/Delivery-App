@@ -95,6 +95,7 @@ class _homeState extends State<home> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Order ID: "),
               Row(
@@ -115,12 +116,47 @@ class _homeState extends State<home> {
                   )
                 ],
               ),
-              Row(
-                children: [
-                  ElevatedButton(onPressed: () {}, child: Text("Details")),
-                  Spacer(),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.directions))
-                ],
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Text(
+                        "Details",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                    Spacer(),
+                    ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.directions,
+                        color: Colors.black,
+                      ),
+                      label: Text(
+                        "Direction",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.green,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
