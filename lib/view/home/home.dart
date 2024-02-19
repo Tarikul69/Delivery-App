@@ -91,8 +91,39 @@ class _homeState extends State<home> {
       child: SizedBox(
         width: Get.width,
         height: 190,
-        child: Column(
-          children: [],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("Order ID: "),
+              Row(
+                children: [
+                  Icon(Icons.location_city),
+                  Text(
+                    "Restaurant Location",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Icon(Icons.location_on),
+                  Text(
+                    "Dhaka Bangladesh",
+                    style: TextStyle(color: Color.fromARGB(255, 59, 59, 59)),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  ElevatedButton(onPressed: () {}, child: Text("Details")),
+                  Spacer(),
+                  IconButton(onPressed: () {}, icon: Icon(Icons.directions))
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
