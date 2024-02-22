@@ -16,18 +16,70 @@ class orderdetails extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.all(15),
-        child: Column(
-          children: [
-            mycard(),
-          ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
+          padding: EdgeInsets.all(15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              mycard(
+                title: "Restaurant Details",
+                title1: "Mc Donald's",
+                subtitle: "Indian cuisine fast food",
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              mycard(
+                title: "Customer Contact Details",
+                title1: "Tarikul Abir",
+                subtitle: "Dhaka Bangladesh",
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Title(
+                color: Colors.black,
+                child: Text(
+                  "Item: 3",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Divider(
+                color: Colors.black26,
+              ),
+              Divider(
+                color: Colors.black26,
+              ),
+              Title(
+                color: Colors.black,
+                child: Text(
+                  "Additional Note",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              TextField(
+                keyboardType: TextInputType.multiline,
+                minLines: 3,
+                maxLines: 5,
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget mycard() {
+  Widget mycard({
+    required String title,
+    required String title1,
+    required String subtitle,
+  }) {
     return SizedBox(
       width: Get.width,
       child: Card(
@@ -37,17 +89,33 @@ class orderdetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Restaurant Details"),
+              Text(title),
               ListTile(
                 leading: CircleAvatar(),
-                title: Text("Mc Donald's"),
-                subtitle: Text("Indian cuisine fast food"),
+                title: Text(
+                  title1,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                subtitle: Text(subtitle),
               ),
-              Row(
-                children: [
-                  Text("data"),
-                  Text("data"),
-                ],
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                child: Row(
+                  children: [
+                    TextButton.icon(
+                      onPressed: () {},
+                      icon: Icon(Icons.call),
+                      label: Text("Call"),
+                    ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      icon: Icon(Icons.directions),
+                      label: Text("Direction"),
+                    )
+                  ],
+                ),
               )
             ],
           ),
