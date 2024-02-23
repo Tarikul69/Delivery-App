@@ -1,4 +1,5 @@
 import 'package:deliveryapp/components/theme/theme_provider.dart';
+import 'package:deliveryapp/view/notification/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +22,12 @@ class _homeState extends State<home> {
           leading: Icon(Icons.home),
         ),
         actions: [
-          Icon(Icons.notifications),
+          IconButton(
+            onPressed: () {
+              Get.to(notification());
+            },
+            icon: Icon(Icons.notifications),
+          ),
           Switch.adaptive(
             activeColor: Theme.of(context).colorScheme.primary,
             applyCupertinoTheme: false,
