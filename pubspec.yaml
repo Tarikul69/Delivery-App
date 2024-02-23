@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   font_awesome_flutter: ^10.6.0
   onboarding: ^3.1.0
+  intl: ^0.19.0
   flutter_pin_code_widget: ^0.1.0
   action_slider: ^0.7.0
   pinput: ^3.0.1
