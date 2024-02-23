@@ -21,8 +21,22 @@ class notification extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.all(10),
-        child: Column(
-          children: [notificationCard()],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+              notificationCard(),
+            ],
+          ),
         ),
       ),
     );
@@ -40,9 +54,10 @@ class notification extends StatelessWidget {
             ),
             subtitle: Text("Notification details"),
           ),
-          Text(
-            DateFormat('kk:mm:ss  EEE d MMM').format(DateTime.now()),
-            style: TextStyle(),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
+            child:
+                Text(DateFormat('kk:mm:ss  EEE d MMM').format(DateTime.now())),
           ),
           Divider()
         ],
