@@ -67,12 +67,7 @@ class _homeState extends State<home> {
               earning(),
               mycard(),
               earning(),
-              mycard(),
-              earning(),
-              mycard(),
-              earning(),
-              mycard(),
-              earning(),
+
               // GridView(
               //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               //     crossAxisCount: 2,

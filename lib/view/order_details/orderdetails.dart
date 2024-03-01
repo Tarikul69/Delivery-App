@@ -65,7 +65,9 @@ class orderdetails extends StatelessWidget {
               ),
               TextField(
                 decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
                 ),
                 //keyboardType: TextInputType.multiline,
                 minLines: 3,

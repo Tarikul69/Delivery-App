@@ -18,6 +18,7 @@ class notification extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        elevation: 0,
       ),
       body: Container(
         padding: EdgeInsets.all(10),
@@ -59,7 +60,9 @@ class notification extends StatelessWidget {
             child:
                 Text(DateFormat('kk:mm:ss  EEE d MMM').format(DateTime.now())),
           ),
-          Divider()
+          Divider(
+            color: Colors.grey,
+          )
         ],
       ),
     );
