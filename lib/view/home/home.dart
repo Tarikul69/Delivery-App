@@ -1,4 +1,5 @@
 import 'package:deliveryapp/components/theme/theme_provider.dart';
+import 'package:deliveryapp/view/map/map.dart';
 import 'package:deliveryapp/view/notification/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -143,7 +144,9 @@ class _homeState extends State<home> {
                     ),
                     Spacer(),
                     ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(map());
+                      },
                       icon: Icon(
                         Icons.directions,
                         color: Colors.black,

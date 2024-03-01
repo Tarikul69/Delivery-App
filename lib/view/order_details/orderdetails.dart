@@ -64,10 +64,13 @@ class orderdetails extends StatelessWidget {
                 ),
               ),
               TextField(
-                keyboardType: TextInputType.multiline,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(),
+                ),
+                //keyboardType: TextInputType.multiline,
                 minLines: 3,
-                maxLines: 5,
-              )
+                maxLines: 10,
+              ),
             ],
           ),
         ),
