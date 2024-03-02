@@ -19,17 +19,24 @@ class profile extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.all(10),
         child: Column(
-          //crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Stack(
-              children: [
-                CircleAvatar(
-                  radius: 70,
-                ),
-                Icon(Icons.camera_alt)
-              ],
-            )
+            Center(
+              child: Stack(
+                children: [
+                  CircleAvatar(
+                    radius: 60,
+                  ),
+                  Positioned(
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.camera_alt),
+                    ),
+                    right: -1,
+                    bottom: -1,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
