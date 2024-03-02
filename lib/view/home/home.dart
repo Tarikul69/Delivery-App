@@ -186,15 +186,16 @@ class _homeState extends State<home> {
                 Icons.wallet_rounded,
                 size: 60,
               ),
-              title: Text("data"),
+              title: Text("Balance"),
               subtitle: Text(
-                "data",
+                "324",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     color: Colors.white),
               ),
-            )
+            ),
+            Container(),
           ],
         ),
       ),
