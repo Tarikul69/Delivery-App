@@ -180,7 +180,22 @@ class _homeState extends State<home> {
         width: Get.width,
         height: 190,
         child: Column(
-          children: [],
+          children: [
+            ListTile(
+              leading: Icon(
+                Icons.wallet_rounded,
+                size: 60,
+              ),
+              title: Text("data"),
+              subtitle: Text(
+                "data",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.white),
+              ),
+            )
+          ],
         ),
       ),
     );
