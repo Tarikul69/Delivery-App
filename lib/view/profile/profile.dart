@@ -13,8 +13,26 @@ class profile extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        centerTitle: true,
+        elevation: 0,
       ),
-      body: Container(),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          //crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                CircleAvatar(
+                  radius: 70,
+                ),
+                Icon(Icons.camera_alt)
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
